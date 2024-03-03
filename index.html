@@ -2,10 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="icon"
       type="image/png"
@@ -15,189 +13,87 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="./src/output.css" rel="stylesheet" />
-    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
+    <title>Frontend Mentor | Intro component with sign up form</title>
   </head>
-  <body
-    class="bg-Red min-h-screen flex items-center justify-center text-center"
-  >
+  <body>
     <main>
-      <div class="flex flex-col md:flex-row md:items-center">
-        <!-- description section  -->
-        <section
-          class="w-[327px] h-[226px] md:w-[525px] md:h-[220px] mx-auto md:text-left mb-16 md:mb-0 mt-[88px] md:mt-0 md:mr-[45px]"
-        >
-          <h1
-            class="text-white font-bold text-[28px] md:text-[50px] leading-9 md:leading-[55px] tracking-[0.29px] md:tracking-[-0.52px] mb-6 md:pt-1"
-          >
-            Learn to code by watching others
-          </h1>
-          <p class="text-[#fff] font-medium text-base leading-[26px] md:pt-2">
-            See how experienced developers solve problems in real-time. Watching
-            scripted tutorials is great, but understanding how developers think
-            is invaluable.
+      <section class="intro-section">
+        <h1>Learn to code by watching others</h1>
+        <p class="main-paragraph">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </section>
+
+      <section class="form-section">
+        <div class="subscription-container">
+          <p class="sub-paragraph">
+            <strong>Try it free 7 days</strong> then $20/mo. thereafter
           </p>
-        </section>
-        <!-- form section -->
-        <section>
-          <div
-            class="bg-Blue rounded-[10px] mx-auto mb-6 shadow-xl w-[327px] h-[88px] md:w-[540px] md:h-[60px]"
-          >
-            <p
-              class="text-white font-bold text-[15px] leading-[26px] tracking-[0.268px] w-[194px] md:w-[320px] m-auto pt-[18px]"
-            >
-              Try it free 7 days
-              <span class="font-normal">then $20/mo. thereafter</span>
-            </p>
+        </div>
+
+        <form novalidate id="form">
+          <div class="input-container">
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="First Name"
+              required
+            />
+            <img class="error-icon" src="images/icon-error.svg" alt="" />
+            <p class="error-message"></p>
           </div>
-          <div
-            class="bg-white rounded-[10px] shadow-xl w-[327px] h-[442px] md:w-[540px] md:h-[474px] mb-[88px] md:mb-0 pt-6 md:pt-10"
-          >
-            <form id="form" method="post">
-              <div class="relative">
-                <input
-                  id="inputFirstName"
-                  class="w-[279px] md:w-[460px] h-[56px] rounded-[5px] border border-solid border-GrayishBlue pl-[19.42px] md:pl-8 text-DarkBlue font-semibold text-sm leading-[26px] tracking-[0.25px] mb-4 md:mb-5 input-border"
-                  type="text"
-                  name="inputFirstName"
-                  placeholder="First Name"
-                  required
-                />
-                <div
-                  class="absolute inset-y-0 right-0 pr-[34.75px] md:pr-[60.75px] flex items-center pointer-events-none h-6 pt-7"
-                >
-                  <i id="errorIcon" class="hidden"
-                    ><img src="images/icon-error.svg" alt=""
-                  /></i>
-                </div>
 
-                <div
-                  class="flex justify-end w-[279px] md:w-[460px] mx-auto relative top-[-14px]"
-                >
-                  <p
-                    id="firstNameError"
-                    class="text-Red italic text-right text-[11px] font-medium hidden"
-                  >
-                    First Name cannot be empty
-                  </p>
-                </div>
-              </div>
-
-              <div class="relative">
-                <input
-                  id="inputLastName"
-                  class="w-[279px] md:w-[460px] h-[56px] rounded-[5px] border border-solid border-GrayishBlue pl-[19.42px] md:pl-8 text-DarkBlue font-semibold text-sm leading-[26px] tracking-[0.25px] mb-4 md:mb-5 input-border"
-                  type="text"
-                  name="inputLastName"
-                  placeholder="Last Name"
-                  required
-                />
-                <div
-                  class="absolute inset-y-0 right-0 pr-[34.75px] md:pr-[60.75px] flex items-center pointer-events-none h-6 pt-7"
-                >
-                  <i id="errorIcon1" class="hidden"
-                    ><img src="images/icon-error.svg" alt=""
-                  /></i>
-                </div>
-
-                <div
-                  class="flex justify-end w-[279px] md:w-[460px] mx-auto relative top-[-14px]"
-                >
-                  <p
-                    id="lastNameError"
-                    class="text-Red italic text-right text-[11px] font-medium hidden"
-                  >
-                    Last Name cannot be empty
-                  </p>
-                </div>
-              </div>
-
-              <div class="relative">
-                <input
-                  id="email"
-                  class="w-[279px] md:w-[460px] h-[56px] rounded-[5px] border border-solid border-GrayishBlue pl-[19.42px] md:pl-8 text-DarkBlue font-semibold text-sm leading-[26px] tracking-[0.25px] mb-4 md:mb-5 input-border"
-                  type="email"
-                  name="email"
-                  placeholder="Email Address"
-                  required
-                />
-                <div
-                  class="absolute inset-y-0 right-0 pr-[34.75px] md:pr-[60.75px] flex items-center pointer-events-none h-6 pt-7"
-                >
-                  <p
-                    class="text-Red font-semibold text-sm leading-[26px] tracking-[0.25px] relative right-[87px] md:right-[244px] hidden"
-                  >
-                    email@example/com
-                  </p>
-                  <i id="errorIcon2" class="hidden"
-                    ><img src="images/icon-error.svg" alt=""
-                  /></i>
-                </div>
-
-                <div
-                  class="flex justify-end w-[279px] md:w-[460px] mx-auto relative top-[-14px]"
-                >
-                  <p
-                    id="emailError"
-                    class="text-Red italic text-right text-[11px] font-medium hidden"
-                  >
-                    Looks like this is not an email
-                  </p>
-                </div>
-              </div>
-
-              <div class="relative">
-                <input
-                  id="password"
-                  class="w-[279px] md:w-[460px] h-[56px] rounded-[5px] border border-solid border-GrayishBlue pl-[19.42px] md:pl-8 text-DarkBlue font-semibold text-sm leading-[26px] tracking-[0.25px] mb-4 md:mb-5 input-border"
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  required
-                />
-                <div
-                  class="absolute inset-y-0 right-0 pr-[34.75px] md:pr-[60.75px] flex items-center pointer-events-none h-6 pt-7"
-                >
-                  <i id="errorIcon3" class="hidden"
-                    ><img src="images/icon-error.svg" alt=""
-                  /></i>
-                </div>
-
-                <div
-                  class="flex justify-end w-[279px] md:w-[460px] mx-auto relative top-[-14px]"
-                >
-                  <p
-                    id="passwordError"
-                    class="text-Red italic text-right text-[11px] font-medium hidden"
-                  >
-                    Password cannot be empty
-                  </p>
-                </div>
-              </div>
-
-              <button
-                id="submitButton"
-                type="button"
-                onclick="validateForm()"
-                class="bg-Green w-[279px] md:w-[460px] h-[56px] rounded-[5px] border-none text-white uppercase font-semibold text-[15px] leading-[26px] tracking-[1px] shadow-lg hover:bg-[#77E2B3] mb-2"
-              >
-                Claim your free trial
-              </button>
-            </form>
-
-            <p
-              class="w-[249px] md:w-[370px] mx-auto text-[#BAB7D4] font-medium text-[11px] leading-[21px] md:pt-1"
-            >
-              By clicking the button, you are agreeing to our
-              <a class="text-Red font-bold" href="#">Terms and Services</a>
-            </p>
+          <div class="input-container">
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Last Name"
+              required
+            />
+            <img class="error-icon" src="images/icon-error.svg" alt="" />
+            <p class="error-message"></p>
           </div>
-        </section>
-      </div>
+
+          <div class="input-container">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+            <img class="error-icon" src="images/icon-error.svg" alt="" />
+            <p class="error-message"></p>
+          </div>
+
+          <div class="input-container">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <img class="error-icon" src="images/icon-error.svg" alt="" />
+            <p class="error-message"></p>
+          </div>
+
+          <button type="submit">Claim your free trial</button>
+          <p class="terms">
+            By clicking the button, you are agreeing to our
+            <a href="#" target="_blank">Terms and Services</a>
+          </p>
+        </form>
+      </section>
     </main>
   </body>
 </html>
