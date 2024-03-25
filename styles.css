@@ -236,6 +236,7 @@ button {
   box-shadow: inset 0 0.25rem 0 rgba(0, 0, 0, 0.0908818);
   border-radius: 0.3125rem;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 button:hover {
