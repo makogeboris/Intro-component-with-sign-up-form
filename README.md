@@ -1,14 +1,11 @@
 # Frontend Mentor - Intro component with sign up form solution
 
-This is a solution to the [Intro component with sign up form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-  - [Continued development](#continued-development)
 - [Author](#author)
 
 ## Overview
@@ -25,12 +22,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](/design/screenshot.jpg)
+![](./design/desktop-preview.jpg)
 
 ### Links
 
-- Solution URL: https://github.com/mkboris/Intro-component-with-sign-up-form
-- Live Site URL: https://intro-component-with-sign-up-form-sable.vercel.app/
+- [Solution](https://github.com/mkboris/Intro-component-with-sign-up-form)
+- [Live Site](https://intro-component-with-sign-up-form-sable.vercel.app/)
 
 ### Built with
 
@@ -38,10 +35,6 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
-
-### Continued development
-
-Building more projects to improve my skills.
 
 ## Author
 
